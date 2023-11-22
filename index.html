@@ -3,95 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <title>Pizza order form </title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
 <body>
-    <form id="container"> 
-        <h1>Pizza order</h1>
+    <div class="container">
+        <form> 
+            <div>
+                <h1>Pizza order</h1>
+                <lable for="customerName">Name</lable>
+                <input type="text" id="customerName" placeholder="your name" /><br>
+            </div>
+            
+            <h2>Choose the size: </h2>
+            <div>
+                <input type="radio" id="size1" name="size"/>
+                <label for="size1">For 2, the price is 7,50€</label>
+            </div>
+            <div>
+                <input type="radio" id="size2" name="size"/>
+                <label for="size2">For 4, the price is 10,50€</label>
+            </div>
+            <div>
+                <input type="radio" id="size3" name="size"/>
+                <label for="size3">For 6, the price is 12,50€</label>
+            </div>
+            <div> 
+                <input type="radio" id="size4" name="size"/>
+                <label for="size4">For 8, the price is 15,50€</label>
+            </div>
+            
+            <h2>Choose your toppping: </h2>
+            <div>   
+                <input type="checkbox" id="top1" value="Pepperoni"/>
+                <label for="top1">Pepperoni</label><br>
+            </div>  
+            <div>  
+                <input type="checkbox" id="top2" value="Cheese"/>
+                <label for="top2">Cheese</label><br>
+            </div>
+            <div>    
+                <input type="checkbox" id="top3" value="Mushrooms"/>
+                <label for="top3">Mushrooms</label><br>
+            </div>
+            <div>    
+                <input type="checkbox" id="top4" value="Onions"/>
+                <label for="top4">Onions</label><br>
+            </div>    
+            <div>
+                <input type="checkbox" id="top5" value="Sausages"/>
+                <label for="top5">Sausages</label><br>
+            </div> 
+            <div>
+                <input type="checkbox" id="top6" value="Olives"/>
+                <label for="top6">Black Olives</label><br>
+            </div> 
+            <div>    
+                <input type="checkbox" id="top7" value="Peppers"/>
+                <label for="top7">Green Peppers</label><br>
+            </div>    
+            <div>    
+                <input type="checkbox" id="top8" value="Pineapple"/>
+                <label for="top8">Pineapple</label><br>
+            </div>
+            <div>    
+                <input type="checkbox" id="top9" value="Spinach"/>
+                <label for="top9">Spinach</label><br>
+            </div>    
+            <div>    
+                <input type="checkbox" id="top10" value="Chicken"/>
+                <label for="top10">Chicken</label><br>
+            </div> 
+            
+            <div class="deliverySection">
+                <span>
+                    <h2>Choose the delivery method: </h2>
+                </span>
+                <select id="deliveryOptions">
+                    <option value="empty"> </option>
+                    <option value="eatIn">Eat-in</option>
+                    <option value="takeAway">Take-away</option>
+                    <option value="homeDelivery">Home delivery</option>
+                </select>
+            </div>
+            
+            <div>
+                <p>Total price: <span id="price"></span></p>
+            </div>
+            
+            <div>
+                <button id="submitButton">Place order</button>
+            </div>
+        </form>
+    </div>
         
-        <div>
-            <lable for="customerName">Name</lable>
-            <input type="text" id="customerName" placeholder="your name" /><br>
-        </div>
-        
-        <h2>Choose the size: </h2>
-        <div>
-            <input type="radio" id="size1" name="size"/>
-            <label for="size1">For 2, the price is 7,50€</label>
-        </div>
-        <div>
-            <input type="radio" id="size2" name="size"/>
-            <label for="size2">For 4, the price is 10,50€</label>
-        </div>
-        <div>
-            <input type="radio" id="size3" name="size"/>
-            <label for="size3">For 6, the price is 12,50€</label>
-        </div>
-        <div> 
-            <input type="radio" id="size4" name="size"/>
-            <label for="size4">For 8, the price is 15,50€</label>
-        </div>
-        
-        <h2>Choose your toppping: </h2>
-        <div>   
-            <input type="checkbox" id="top1" value="Pepperoni"/>
-            <label for="top1">Pepperoni</label><br>
-        </div>  
-        <div>  
-            <input type="checkbox" id="top2" value="Cheese"/>
-            <label for="top2">Cheese</label><br>
-        </div>
-        <div>    
-            <input type="checkbox" id="top3" value="Mushrooms"/>
-            <label for="top3">Mushrooms</label><br>
-        </div>
-        <div>    
-            <input type="checkbox" id="top4" value="Onions"/>
-            <label for="top4">Onions</label><br>
-        </div>    
-        <div>
-            <input type="checkbox" id="top5" value="Sausages"/>
-            <label for="top5">Sausages</label><br>
-        </div> 
-        <div>
-            <input type="checkbox" id="top6" value="Olives"/>
-            <label for="top6">Black Olives</label><br>
-        </div> 
-        <div>    
-            <input type="checkbox" id="top7" value="Peppers"/>
-            <label for="top7">Green Peppers</label><br>
-        </div>    
-        <div>    
-            <input type="checkbox" id="top8" value="Pineapple"/>
-            <label for="top8">Pineapple</label><br>
-        </div>
-        <div>    
-            <input type="checkbox" id="top9" value="Spinach"/>
-            <label for="top9">Spinach</label><br>
-        </div>    
-        <div>    
-            <input type="checkbox" id="top10" value="Chicken"/>
-            <label for="top10">Chicken</label><br>
-        </div> 
-        
-        <div class="deliverySection">
-            <label for="deliveryOptions">Choose the delivery method: </label>
-            <select id="deliveryOptions">
-                <option value="empty"></option>
-                <option value="eatIn">Eat-in</option>
-                <option value="takeAway">Take-away</option>
-                <option value="homeDelivery">Home delivery</option>
-            </select>
-        </div>
-        
-        <div>
-            <div>Total price: <span id="price"></span></div>
-        </div>
-
-        <div>
-            <button id="submitButton">Place  order</button>
-        </div>
-    </form>
         <script src="main.js"></script>
 </body>
 </html>
